@@ -1,0 +1,103 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:stretchColumns="1"
+    tools:context=".Login" >
+
+   <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:scaleType="fitCenter"
+       android:src="@drawable/logo"
+       android:contentDescription="@string/hello_world"/>
+   <TextView 
+       android:text="@string/welcome"
+       android:id="@+id/TextView"
+       android:textSize="@dimen/label_font_size"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:padding="@dimen/title_padding"/>
+ <!-- 输入用户名的行 -->
+<TableRow>
+<TextView
+	android:text="@string/user_name"
+	android:textSize="@dimen/label_font_size"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+<EditText
+	android:id="@+id/userEditText"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:inputType="text"/>
+</TableRow>
+<!-- 输入密码的行 -->
+<TableRow>
+<TextView
+	android:text="@string/user_pass"
+	android:textSize="@dimen/label_font_size"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+
+<EditText
+    android:id="@+id/pwdEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword"
+    android:text="" />
+
+</TableRow>
+<!-- 定义登录、取消按钮的行 -->
+<LinearLayout android:orientation="horizontal"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:gravity="center">
+<Button
+	android:id="@+id/bnLogin"
+	android:text="@string/login"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+<Button
+	android:id="@+id/bnCancel"
+	android:text="@string/cancel"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>	
+</LinearLayout>    
+
+<LinearLayout android:orientation="horizontal"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="100dp"
+	android:gravity="center">
+<TextView
+    android:id="@+id/tvWeixin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/logo_wechat"
+    />
+<TextView
+    android:id="@+id/tvQq"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/logo_qq"
+    />
+<TextView
+    android:id="@+id/tvWeibo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/logo_sinaweibo"
+    />
+<TextView
+    android:id="@+id/tvQzone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/logo_qzone"
+    />
+</LinearLayout>
+
+</TableLayout>
