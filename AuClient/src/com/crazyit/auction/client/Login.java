@@ -201,7 +201,7 @@ public class Login extends Activity implements Callback, OnClickListener,
 			plat.removeAccount();
 		}
 		plat.setPlatformActionListener(this);
-		plat.SSOSetting(false);// true:close the SSO;false:open the SSO
+		plat.SSOSetting(true);// true:close the SSO;false:open the SSO
 		plat.showUser(null);
 	}
 
